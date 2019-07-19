@@ -4,3 +4,9 @@ The project uses a mobile phone with a built-in camera. Obstacles/objects are de
 Since, the co-ordinates of the bounding boxes of the detected objects are known, the height of the boxes can be calculated. 
 As the blind person walks towards the object, the height of bounding boxes keeps on increasing and at some point of time it saturates, 
 i.e. it does not increase. This indicates that the person is close to the object and needs guidance through audio to change his path.
+
+
+
+
+
+
