@@ -33,8 +33,6 @@ PATH_TO_VIDEO = os.path.join(CWD_PATH,VIDEO_NAME)
 NUM_CLASSES = 1
 
 # Load the label map.
-# Label maps map indices to category names, so that when our convolution
-# network predicts `5`, we know that this corresponds to `king`.
 # Here we use internal utility functions, but anything that returns a
 # dictionary mapping integers to appropriate string labels would be fine
 label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
@@ -92,9 +90,9 @@ while(video.isOpened()):
         np.squeeze(scores),
         category_index,
         use_normalized_coordinates=True,
-        line_thickness=8,
+        line_thickness=2,
         min_score_thresh=0.60,
-        skip_scores=True)
+        skip_scores=True) # This command is to remove the confidence level from the image in which the object is detected.
 
     # All the results have been drawn on the frame, so it's time to display it.
     cv2.imshow('Object detector', frame)
